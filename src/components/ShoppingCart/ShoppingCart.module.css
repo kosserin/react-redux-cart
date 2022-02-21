@@ -1,0 +1,23 @@
+.shopping-cart {
+  max-width: 90vw;
+  width: 700px;
+  margin: 2rem auto;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fefefe;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.shopping-cart ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 2px;
+  gap: 1rem;
+}

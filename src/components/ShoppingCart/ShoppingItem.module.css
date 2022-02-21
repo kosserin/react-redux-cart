@@ -1,0 +1,59 @@
+.shopping-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(120, 0, 120, 1);
+  border-radius: 2px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+.shopping-item .left h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.shopping-item .left h3 {
+  font-weight: 400;
+}
+
+.shopping-item .left h3 span {
+  font-weight: 600;
+}
+
+.shopping-item .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.shopping-item .right h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.shopping-item .right h1 span {
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.shopping-item .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.shopping-item .buttons button {
+  background: rgba(0, 0, 0, 1);
+  color: #fefefe;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  min-width: 50px;
+  height: 1.8rem;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.1);
+}
