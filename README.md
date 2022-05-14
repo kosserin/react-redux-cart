@@ -1,5 +1,5 @@
 # React Application for adding products to cart that are instantly sent to database
-Small project showing 4 products that user can add to cart. Per each click user increment total amount by 1. By clicking on cart button in top right corner, section with selected products is displayed, with name, amount, price per item, total price for that product and button to add and remove one. Per each click, new orders are PUT in firebase realtime database. 
+Small project showing 3 products that user can add to cart. Per each click user increment total amount by 1. By clicking on cart button in top right corner, section with selected products is displayed, with name, amount, price per item, total price for that product and button to add and remove one. Per each click, new orders are PUT in firebase realtime database. 
 
 ## Homepage
 
