@@ -1,16 +1,16 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { cartActions } from '../../store/index'
+import { uiActions } from '../../store/ui'
 import styles from './Header.module.css';
 
 const Header = () => {
 
   const dispatch = useDispatch();
-  const products = useSelector(state => state.products);
+  const products = useSelector(state => state.cart.products);
   const totalNumberOfAddedProducts = products.length > 0 ? products.map(product => product.amount).reduce((a,b) => a + b) : 0;
 
   const toggleCartHandler = () => {
-    dispatch(cartActions.showCart())
+    dispatch(uiActions.showCart())
   }
 
   return (

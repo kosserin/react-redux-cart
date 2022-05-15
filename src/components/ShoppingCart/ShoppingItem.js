@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import {cartActions} from '../../store/index'
+import {cartActions} from '../../store/cart'
 import styles from './ShoppingItem.module.css';
 
 const ShoppingItem = (props) => {

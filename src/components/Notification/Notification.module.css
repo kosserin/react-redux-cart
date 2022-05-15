@@ -1,0 +1,25 @@
+.notification {
+  width: 100vw;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 60px;
+  color: #fefefe;
+  font-size: 1.25rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.success {
+  background-color: rgba(0, 129, 0, 0.9);
+}
+
+.error {
+  background-color: rgba(129, 0, 0, 0.9);
+}
+
+.loading {
+  background-color: rgba(120, 0, 120, 0.9);
+}

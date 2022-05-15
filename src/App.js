@@ -1,8 +1,11 @@
-import React, {useState} from "react";
+import React, { useEffect } from "react";
+import Notification from "./components/Notification/Notification";
 import Header from "./components/Header/Header";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 import Products from "./components/Products/Products";
 import { useSelector } from "react-redux";
+import {sendCartData, fetchCartData} from './store/cart-actions';
+import { useDispatch } from "react-redux";
 
 const DUMMY_PRODUCTS = [
   {
@@ -25,13 +28,33 @@ const DUMMY_PRODUCTS = [
   },
 ]
 
+let isInitial = true;
+
 const App = () => {
 
-  const selectedProducts = useSelector(state => state.products);
-  const isCartShown = useSelector(state => state.isShown)
+  const selectedProducts = useSelector(state => state.cart.products);
+  const isCartShown = useSelector(state => state.ui.isShown);
+  const cartChanged = useSelector(state => state.cart.changed);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchCartData());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (isInitial) {
+      isInitial = false;
+      return;
+    }
+
+    if(cartChanged) {
+      dispatch(sendCartData(selectedProducts));
+    }
+  }, [selectedProducts, dispatch]);
 
   return (
     <React.Fragment>
+    <Notification />
       <Header />
       {isCartShown && <ShoppingCart selectedProducts={selectedProducts} />}
       <Products products={DUMMY_PRODUCTS} />
